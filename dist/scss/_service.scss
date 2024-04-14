@@ -1,0 +1,36 @@
+.service_wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 767px) {
+    display: block;
+  }
+  .service_content {
+    box-shadow: 1px 1px 10px 0px #e8e8e8;
+    border-radius: 5px;
+    padding: 20px 20px 50px 20px;
+    margin-top: 30px;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .service_title {
+      background-color: rgba(0, 0, 0, 0.88);
+      padding: 20px;
+      color: $color__red1;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: capitalize;
+      text-align: center;
+      margin-top: -5px;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      z-index: 10;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

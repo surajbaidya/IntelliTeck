@@ -1,0 +1,60 @@
+.footer__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 27px;
+}
+.icon__address {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 10px;
+  color: $color__white1;
+  text-decoration: none;
+}
+.section__footer {
+  background-color: $color__black4;
+  padding: 50px 0;
+  color: $color__white1;
+  @media (max-width: 767px) {
+    padding-bottom: 30px;
+  }
+
+  .footer__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    padding-bottom: 75px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  .footer__about {
+    p {
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 24px;
+      margin: 0;
+      text-align: justify;
+    }
+  }
+  .footer__contact {
+    .footer__icon-wrap {
+      padding: 20px 35px 5px;
+      border: 2px solid rgba(181, 178, 181, 0.5);
+      border-radius: 2px;
+      .main__footer-icons {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

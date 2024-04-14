@@ -1,0 +1,138 @@
+.section__company {
+  .heading__content {
+    &.title__heading {
+      color: $color__red1;
+      &:after {
+        background-color: $color__yellow1;
+        left: 45% !important;
+      }
+    }
+  }
+  .company__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .common__parent {
+      display: flex;
+      align-items: flex-start;
+      margin: 50px 0;
+      grid-gap: 14px;
+      @media (max-width: 1199px) {
+        grid-gap: 10px;
+      }
+      @media (max-width: 991px) {
+        margin-bottom: 10px;
+      }
+    }
+    .company__business {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      @media (max-width: 991px) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+    }
+    .company__data {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      @media (max-width: 991px) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+    }
+    .company__quality {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      @media (max-width: 991px) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 3/4;
+      }
+    }
+    .company__Solutions {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      @media (max-width: 991px) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 4/5;
+      }
+    }
+    .company__Development {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      @media (max-width: 991px) {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 5/6;
+      }
+    }
+    .company__management {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      @media (max-width: 991px) {
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 9/7;
+      }
+    }
+  }
+  .intellitek-services {
+    margin: 35px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 20px;
+    .common__intellitek {
+      padding: 25px 35px;
+      border-radius: 10px;
+      @media (max-width: 991px) {
+        padding: 25px 10px;
+      }
+    }
+    .about__intellitek {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      border: 1px solid $color__red4;
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+    }
+    .goals__intellitek {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      border: 1px solid $color__yellow1;
+      @media (max-width: 767px) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+    }
+  }
+}
