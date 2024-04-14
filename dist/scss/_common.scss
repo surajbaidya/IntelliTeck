@@ -114,51 +114,13 @@
   opacity: 0.5;
   position: relative;
   width: 100%;
-  &:before {
-    content: "+";
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: -33px;
-    left: -16px;
-    font-size: 55px;
-    color: $color__grey2;
-  }
-  &:last-child:after {
-    content: "+";
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: -33px;
-    right: -5px;
-    font-size: 55px;
-    color: $color__grey2;
-  }
   &:hover {
     opacity: 1;
     background-color: $color__white1;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   }
 }
 
-.plus__client {
-  &:after {
-    content: "+";
-    height: 20px;
-    width: 20px;
-    font-size: 55px;
-    position: absolute;
-    top: 65px;
-    left: -16px;
-    color: $color__grey2;
-    @media (max-width: 991px) {
-      left: 369px;
-    }
-    @media (max-width: 767px) {
-      left: 356px;
-      top: -129px;
-    }
-  }
-}
 .btn {
   font-family: "Montserrat";
   padding: 17px 35px;
