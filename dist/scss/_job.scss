@@ -1,0 +1,156 @@
+.section__job {
+  .iframe__title {
+    .main__iframe-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 50px;
+      @media (max-width: 767px) {
+        display: block;
+      }
+      .flip__content-button {
+        a {
+          transition: 0.3s ease-in-out;
+          &:hover {
+            background-color: $color__red5;
+          }
+        }
+      }
+    }
+    .iframe__content-top,
+    .iframe__content-bottom {
+      padding: 30px;
+    }
+    .iframe__content-top {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      border: 2px solid solid rgba(255, 255, 255, 0.3) !important;
+    }
+    .iframe__content-middle {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .iframe__content-bottom {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+  }
+}
+
+.iframe {
+  position: relative;
+  display: flex;
+  height: 90vw;
+  max-height: 100vh;
+  overflow: hidden;
+  @media (max-width: 767px) {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  &__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 0;
+    padding-bottom: 66.25%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  &__video-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      visibility 0.5s linear;
+    background-color: rgba(41, 55, 66, 0.8);
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  &__title {
+    position: relative;
+    flex: 0 0 auto;
+    align-self: center;
+    width: 100%;
+    .heading__content {
+      color: $color__white1;
+    }
+    @media (max-width: 767px) {
+      padding: 30px 0;
+    }
+  }
+  &__video {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.flip-container {
+  perspective: 1000;
+  border: none;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 100%;
+  height: 240px;
+  margin: 0 auto;
+  @media (max-width: 767px) {
+    height: 180px;
+  }
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background: transparent;
+  border: 1px solid $color__red1;
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+  background: $color__red1;
+}

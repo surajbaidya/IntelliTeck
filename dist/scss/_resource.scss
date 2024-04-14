@@ -1,0 +1,101 @@
+.section_resource-partner {
+  padding: 55px 0;
+  font-family: "Open Sans", sans-serif;
+  position: relative; /* Needed for absolute positioning of pseudo-element */
+  overflow: hidden; /* Hide overflow to prevent gradient overflow */
+  background: linear-gradient(
+    89deg,
+    #3657d9,
+    #5452c5,
+    #744daf,
+    #a8458c,
+    #d03e71,
+    #f4af00,
+    #f5d570
+  );
+  background-size: 1400% 1400%;
+
+  -webkit-animation: gradientAnimation 20s ease infinite;
+  -moz-animation: gradientAnimation 20s ease infinite;
+  animation: gradientAnimation 20s ease infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.resource_partner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 30px;
+    align-items: baseline;
+  }
+
+  .resource_partner-title {
+    font-size: 22px;
+    line-height: 24px;
+    color: $color__white1;
+    font-weight: 500;
+  }
+
+  .resource_partner-button {
+    background-color: $color__white1;
+    color: $color__black1;
+    font-size: 15px;
+    line-height: 19px;
+    padding: 17px 17px 17px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+
+    &:hover {
+      background-color: $color__black2;
+      color: $color__white1;
+
+      span {
+        color: $color__red1;
+      }
+    }
+
+    span {
+      vertical-align: middle;
+      font-size: 27px;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+  }
+}
